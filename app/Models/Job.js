@@ -18,7 +18,7 @@ export class Job {
       <div class="card">
         <div class="card-body">
           <h3>${this.company} | ${this.jobTitle}</h3>
-          <p><strong>${this.hours}hrs /week</strong> </p>
+          <p><strong>${this.hours}hrs /Week</strong> </p>
           <p> <Strong>$${this.rate} /Hour</Strong></p>
           <p>${this.description}</p>
         </div>
@@ -32,9 +32,9 @@ export class Job {
   }
 
   static getJobButton() {
-    // onclick="app.jobsController.addJob()"
+
     return /*html*/ `
-    <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#rightBar" >🧑‍⚖️ Add Job</button>
+    <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#rightBar" onclick="app.jobsController.addJob()">👷‍♂️ Add Job</button>
     `
 
   }
@@ -79,27 +79,8 @@ export class Job {
       </form >
       `
   }
-  get AddCartTemplte() {
-    return/*html*/`
-      < div >
-      <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#apple">Add Job</button>
-</ >
-      `
 
-  }
 
 
 
 }
-{/*
-<div class="col-md-4 col-lg-3">
-  <div class="card">
-    <div class="card-body">
-      <h3>Microsoft | CEO</h3>
-      <p>80 hrs /week</p>
-      <p> <Strong>160 billion /year</Strong></p>
-      <p>Description</p>
-    </div>
-  </div>
-</div> 
-*/}

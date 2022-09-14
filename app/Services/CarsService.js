@@ -36,10 +36,6 @@ class CarsService {
 
   }
   async deleteCar(id) {
-
-    const yes = await Pop.confirm('Delete the Car?')
-    if (!yes) { return } // FULL STOP
-
     // TODO simulate an error 
     await SandboxServer.delete(`/api/cars/${id}`)
     appState.cars = appState.cars.filter(c => c.id != id)

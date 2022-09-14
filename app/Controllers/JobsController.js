@@ -45,17 +45,29 @@ export class JobsController {
       } else {
         await jobsService.addJob(formData)
       }
-
-
       // @ts-ignore
       form.reset()
-
     } catch (error) {
       console.error('[addJob]', error)
+      Pop.error(error)
     }
   }
-  async addJob() {
+  async deleteJob(id) {
+    try {
+      const yes = await Pop.confirm('Delete this Job?')
+      if (!yes) { return }
+      await jobsService.deleteJob(id)
+    } catch (error) {
+      console.error('[DELETE JOB]', error)
+      Pop.error(error)
+    }
 
+  }
+  addJob() {
+    // @ts-ignore
+    appState.activeJob = null
+    const template = Job.getJobForm()
+    setHTML('forms', template)
   }
   beginEdit(id) {
     jobsService.setActiveJob(id)
