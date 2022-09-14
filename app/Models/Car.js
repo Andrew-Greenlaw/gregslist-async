@@ -36,7 +36,11 @@ export class Car {
     `
   }
 
-
+  static getCarButton() {
+    return/*html*/`
+  <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#rightBar" onclick="app.carsController.addCar()">🚗 Add Car</button>
+  `
+  }
   // TODO using an editable...
   /**@param {Car} [editable] */
   static getCarForm(editable) {

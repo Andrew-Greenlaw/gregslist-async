@@ -5,7 +5,7 @@ import { loadState } from "./Utils/Store.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
-  values = loadState('values', Value)
+  // values = loadState('values', Value)
 
   /** @type {import('./Models/Car').Car[]} */
   cars = []
@@ -13,6 +13,12 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Car').Car} */
   // @ts-ignore
   activeCar = null
+  /** @type {import('./Models/Job').Job[]} */
+  jobs = []
+  /** @type {import('./Models/Job').Job} */
+  // @ts-ignore
+  activeJob = null
+
 }
 
 export const appState = new Proxy(new AppState(), {

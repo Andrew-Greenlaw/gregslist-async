@@ -32,6 +32,7 @@ export class CarsController {
   showCars() {
     this.getCars()
     setHTML('forms', Car.getCarForm())
+    setHTML('formButton', Car.getCarButton())
   }
 
   async handleSubmit() {
