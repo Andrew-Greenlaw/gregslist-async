@@ -44,8 +44,6 @@ export class Car {
   // TODO using an editable...
   /**@param {Car} [editable] */
   static getCarForm(editable) {
-
-
     editable = editable || new Car({ description: '', imgUrl: ' ', make: '', model: '', price: 0, year: 1990 })
 
     return /*html*/`

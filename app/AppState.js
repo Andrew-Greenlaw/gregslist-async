@@ -18,6 +18,11 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Job').Job} */
   // @ts-ignore
   activeJob = null
+  /** @type {import('./Models/House').House[]} */
+  houses = []
+  /** @type {import('./Models/House').House} */
+  // @ts-ignore
+  activeHouse = null
 
 }
 
